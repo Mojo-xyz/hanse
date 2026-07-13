@@ -1,0 +1,12 @@
+{
+  "name": "hanse-redseasails",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Red Sea Sails x Hanse Yachts brochure site",
+  "scripts": {
+    "start": "serve -s . -l tcp://0.0.0.0:8080"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
