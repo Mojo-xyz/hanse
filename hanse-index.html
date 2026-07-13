@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hanse Yachts — Red Sea Sails | Official Partner, Red Sea & Egypt</title>
+<meta name="description" content="Hanse Yachts in the Red Sea and Egypt. The full Hanse range with specifications and pricing, delivered and supported by Red Sea Sails — charter, sailing school and events." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@200;300;400;500&family=Archivo:wght@500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#07212E;
+    --sea:#0A2A3A;
+    --sea-2:#0E384B;
+    --azure:#1A7E97;
+    --azure-bright:#27A7C2;
+    --gold:#CF9B4E;
+    --gold-soft:#E6C58A;
+    --pearl:#F6F2EA;
+    --pearl-card:#FFFFFF;
+    --text:#0C2029;
+    --muted:#5C6F78;
+    --line:rgba(207,155,78,.55);
+    --ulter-gold:#C9A86A;
+    --maxw:1180px;
+    --r:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Hanken Grotesk",system-ui,sans-serif;
+    color:var(--text);
+    background:var(--pearl);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .num{font-family:"Antonio",sans-serif;font-weight:300;letter-spacing:.02em;line-height:.8}
+  .display{font-family:"Archivo",sans-serif;letter-spacing:-.02em;line-height:1.04}
+  .eyebrow{
+    font-family:"Archivo",sans-serif;font-weight:700;text-transform:uppercase;
+    letter-spacing:.22em;font-size:.72rem;color:var(--gold);
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(7,33,46,.82);backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff;font-family:"Archivo",sans-serif;font-weight:800;letter-spacing:.01em;font-size:1.02rem}
+  .brand .x{color:var(--gold);font-weight:500;font-size:.95rem}
+  .brand .hanse{color:var(--azure-bright);letter-spacing:.06em}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a{color:#cfe0e6;font-size:.92rem;font-weight:500}
+  .nav-links a:hover{color:#fff}
+  .btn{
+    font-family:"Archivo",sans-serif;font-weight:700;font-size:.86rem;letter-spacing:.02em;
+    padding:11px 20px;border-radius:999px;cursor:pointer;border:1px solid transparent;
+    transition:transform .15s ease,background .2s ease,color .2s ease,border-color .2s ease;
+    display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+  }
+  .btn-gold{background:var(--gold);color:var(--ink)}
+  .btn-gold:hover{background:var(--gold-soft);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-soft)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{background:var(--sea-2);transform:translateY(-1px)}
+  .nav-toggle{display:none}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;overflow:hidden;color:#fff;
+    background:
+      radial-gradient(120% 90% at 80% -10%, rgba(39,167,194,.30), transparent 55%),
+      linear-gradient(180deg,#0A2A3A 0%, #07212E 60%, #061A24 100%);
+  }
+  .hero .wrap{position:relative;z-index:2;padding:92px 24px 120px}
+  .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:26px}
+  .hero-eyebrow::before{content:"";width:30px;height:1px;background:var(--gold)}
+  .hero h1{font-family:"Archivo",sans-serif;font-weight:800;font-size:clamp(2.4rem,5.4vw,4.3rem);letter-spacing:-.025em;line-height:1.02;max-width:16ch}
+  .hero h1 em{font-style:normal;color:var(--gold-soft)}
+  .hero p.lede{margin-top:24px;max-width:52ch;font-size:clamp(1.02rem,1.6vw,1.22rem);color:#bcd2da}
+  .hero-cta{margin-top:38px;display:flex;gap:14px;flex-wrap:wrap}
+  .hero-stats{margin-top:64px;display:flex;gap:42px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.12);padding-top:28px}
+  .hero-stats .stat .n{font-family:"Antonio",sans-serif;font-weight:300;font-size:2.6rem;color:#fff;line-height:1}
+  .hero-stats .stat .l{font-size:.82rem;color:#9fb8c1;text-transform:uppercase;letter-spacing:.13em;margin-top:6px}
+  /* ambient sail/sea svg */
+  .hero-art{position:absolute;inset:0;z-index:1;opacity:.5;pointer-events:none}
+  .hero-art svg{position:absolute;right:-4%;bottom:0;height:108%;width:auto}
+  .waterline{height:2px;width:100%;background:linear-gradient(90deg,transparent,var(--gold) 18%,var(--gold-soft) 50%,var(--gold) 82%,transparent)}
+
+  /* ---------- INTRO STRIP ---------- */
+  .strip{background:var(--ink);color:#cfe0e6}
+  .strip .wrap{display:flex;flex-wrap:wrap;gap:14px 40px;align-items:center;justify-content:space-between;padding:26px 24px}
+  .strip .pill{display:flex;align-items:center;gap:10px;font-family:"Archivo",sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.04em;color:#e7eef1}
+  .strip .pill svg{width:18px;height:18px;flex:none;color:var(--gold)}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:96px 0}
+  .sec-head{max-width:62ch;margin-bottom:54px}
+  .sec-head h2{font-family:"Archivo",sans-serif;font-weight:800;font-size:clamp(1.9rem,3.4vw,2.9rem);letter-spacing:-.02em;line-height:1.06;margin-top:14px}
+  .sec-head p{margin-top:16px;color:var(--muted);font-size:1.05rem;max-width:54ch}
+
+  /* ---------- FEATURED 460 ---------- */
+  .featured{background:linear-gradient(160deg,#0A2A3A,#07212E);color:#fff}
+  .feat-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:54px;align-items:center}
+  .feat-numwrap{position:relative;border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:34px 30px;overflow:hidden;background:
+      radial-gradient(120% 120% at 100% 0%, rgba(39,167,194,.22), transparent 60%)}
+  .feat-numwrap .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(207,155,78,.16);border:1px solid var(--gold);color:var(--gold-soft);padding:7px 14px;border-radius:999px;font-family:"Archivo",sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+  .feat-numwrap .big{font-size:clamp(8rem,20vw,15rem);color:#fff;margin:8px 0 -6px}
+  .feat-numwrap .sub{font-family:"Archivo",sans-serif;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#9fb8c1;font-size:.82rem}
+  .feat-copy h3{font-family:"Archivo",sans-serif;font-weight:800;font-size:1.9rem;letter-spacing:-.015em;line-height:1.1}
+  .feat-copy p{color:#bcd2da;margin-top:16px;font-size:1.04rem}
+  .feat-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 22px;margin:30px 0 26px;border-top:1px solid rgba(255,255,255,.12);padding-top:26px}
+  .feat-specs .s .v{font-family:"Antonio",sans-serif;font-weight:400;font-size:1.5rem;color:#fff;line-height:1}
+  .feat-specs .s .k{font-size:.74rem;color:#8fa9b2;text-transform:uppercase;letter-spacing:.12em;margin-top:6px}
+  .feat-note{font-size:.86rem;color:var(--gold-soft);margin-bottom:22px}
+
+  /* ---------- FLEET GRID ---------- */
+  .fleet{background:var(--pearl)}
+  .fleet-controls{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:38px}
+  .fleet-controls .note{font-size:.84rem;color:var(--muted);max-width:42ch}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{
+    background:var(--pearl-card);border:1px solid #e7e0d2;border-radius:var(--r);
+    padding:26px 24px 22px;display:flex;flex-direction:column;
+    transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+    position:relative;overflow:hidden;
+  }
+  .card::after{content:"";position:absolute;left:24px;right:24px;top:118px;height:1px;background:var(--line);opacity:.5}
+  .card:hover{transform:translateY(-5px);box-shadow:0 18px 40px -22px rgba(7,33,46,.55);border-color:var(--gold)}
+  .card .topline{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+  .card .cnum{font-size:4.4rem;color:var(--ink)}
+  .card .ctag{font-family:"Archivo",sans-serif;font-weight:700;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--azure);text-align:right;max-width:11ch;padding-top:8px}
+  .card .cname{font-family:"Archivo",sans-serif;font-weight:800;font-size:1.18rem;margin-top:10px}
+  .card .cblurb{color:var(--muted);font-size:.92rem;margin-top:8px;min-height:42px}
+  .card .cspecs{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;margin-top:18px}
+  .card .cspecs div{display:flex;justify-content:space-between;gap:8px;font-size:.86rem;border-bottom:1px dotted #e0d8c8;padding-bottom:5px}
+  .card .cspecs span:first-child{color:var(--muted)}
+  .card .cspecs span:last-child{font-weight:600;font-family:"Archivo",sans-serif}
+  .card .cfoot{margin-top:auto;padding-top:20px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+  .card .price .from{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+  .card .price .amt{font-family:"Antonio",sans-serif;font-weight:400;font-size:1.65rem;color:var(--ink);line-height:1}
+  .card .cbtns{display:flex;gap:8px}
+  .mini{font-family:"Archivo",sans-serif;font-weight:700;font-size:.78rem;padding:9px 14px;border-radius:999px;cursor:pointer;border:1px solid var(--ink);background:var(--ink);color:#fff;transition:.18s}
+  .mini:hover{background:var(--azure);border-color:var(--azure)}
+  .mini.alt{background:transparent;color:var(--ink)}
+  .mini.alt:hover{background:var(--ink);color:#fff}
+  .card .award{display:inline-flex;align-items:center;gap:6px;background:rgba(207,155,78,.14);color:#8a6420;border:1px solid var(--gold);border-radius:999px;padding:4px 11px;font-family:"Archivo",sans-serif;font-weight:700;font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;margin-top:12px;width:max-content}
+  .card .cnote{font-size:.76rem;color:#9a7a3c;margin-top:10px}
+  /* teaser */
+  .card.teaser{background:linear-gradient(150deg,#0A2A3A,#07212E);border-color:#0A2A3A;color:#fff;justify-content:center;align-items:flex-start}
+  .card.teaser::after{display:none}
+  .card.teaser .cnum{color:rgba(255,255,255,.92)}
+  .card.teaser .cname{color:#fff}
+  .card.teaser .cblurb{color:#bcd2da}
+  .card.teaser .soon{display:inline-flex;align-items:center;gap:8px;color:var(--gold-soft);font-family:"Archivo",sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;margin-top:16px}
+
+  /* ---------- WHY ---------- */
+  .why{background:var(--ink);color:#cfe0e6}
+  .why .sec-head h2{color:#fff}
+  .why .sec-head p{color:#a9c2cb}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .why-card{border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:30px 26px;background:rgba(255,255,255,.02)}
+  .why-card .ic{width:42px;height:42px;border-radius:10px;display:grid;place-items:center;background:rgba(207,155,78,.14);color:var(--gold);margin-bottom:18px}
+  .why-card .ic svg{width:22px;height:22px}
+  .why-card h4{font-family:"Archivo",sans-serif;font-weight:700;color:#fff;font-size:1.12rem}
+  .why-card p{font-size:.95rem;margin-top:10px;color:#a9c2cb}
+
+  /* ---------- EVENTS ---------- */
+  .events{background:var(--pearl)}
+  .ev-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .ev{border:1px solid #e7e0d2;border-radius:var(--r);padding:34px 30px;background:var(--pearl-card);position:relative;overflow:hidden}
+  .ev .date{font-family:"Archivo",sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.74rem;color:var(--gold);background:rgba(207,155,78,.12);padding:6px 12px;border-radius:999px;display:inline-block}
+  .ev h4{font-family:"Archivo",sans-serif;font-weight:800;font-size:1.5rem;margin-top:18px;letter-spacing:-.01em}
+  .ev p{color:var(--muted);margin-top:10px;font-size:.98rem}
+  .ev .loc{margin-top:16px;font-size:.86rem;color:var(--azure);font-weight:600}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:linear-gradient(160deg,#0A2A3A,#061A24);color:#fff}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start}
+  .contact h2{font-family:"Archivo",sans-serif;font-weight:800;font-size:clamp(1.9rem,3.4vw,2.7rem);letter-spacing:-.02em;line-height:1.08}
+  .contact .lede{color:#bcd2da;margin-top:18px;font-size:1.05rem;max-width:46ch}
+  .contact-detail{margin-top:30px;display:flex;flex-direction:column;gap:16px}
+  .contact-detail a,.contact-detail span{display:flex;align-items:center;gap:13px;color:#dce8ec;font-size:1rem}
+  .contact-detail svg{width:20px;height:20px;color:var(--gold);flex:none}
+  .contact-detail a:hover{color:var(--gold-soft)}
+  form{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:30px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#9fb8c1;margin-bottom:7px;font-family:"Archivo",sans-serif;font-weight:600}
+  .field input,.field select,.field textarea{
+    width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);
+    border-radius:10px;padding:13px 14px;color:#fff;font-family:inherit;font-size:.96rem;transition:border-color .2s
+  }
+  .field textarea{resize:vertical;min-height:96px}
+  .field input::placeholder,.field textarea::placeholder{color:#7e98a1}
+  .field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%239fb8c1' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+  .field select option{color:#0c2029}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  form .btn-gold{width:100%;justify-content:center;margin-top:6px;font-size:.95rem;padding:14px}
+  .form-fine{font-size:.78rem;color:#8fa9b2;margin-top:14px;text-align:center}
+  .form-fine.ok{color:#7fd1a8}
+  .form-fine.err{color:#e7a78a}
+  .form-fine a{color:var(--gold-soft);text-decoration:underline}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:#061A24;color:#90a8b1;padding:54px 0 40px;border-top:1px solid rgba(255,255,255,.07)}
+  .foot-top{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:flex-start}
+  .foot-brand{color:#fff;font-family:"Archivo",sans-serif;font-weight:800;font-size:1.05rem}
+  .foot-links{display:flex;gap:26px;flex-wrap:wrap}
+  .foot-links a{font-size:.9rem}
+  .foot-links a:hover{color:var(--gold-soft)}
+  .disclaimer{margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem;line-height:1.7;color:#6f8891}
+  .disclaimer strong{color:#a9c2cb}
+
+  /* brand logo (optional) */
+  .brand-logo{display:none;height:36px;width:auto}
+
+  /* financing — Ulter by Valu */
+  .finance{background:var(--pearl);padding:64px 0}
+  .finance-panel{position:relative;overflow:hidden;border-radius:18px;padding:54px 50px;color:#ECE6DA;
+    background:radial-gradient(120% 130% at 100% 0%, rgba(248,83,0,.16), transparent 55%), linear-gradient(155deg,#01282a,#00393b);
+    border:1px solid rgba(248,83,0,.3)}
+  .finance-head{display:flex;align-items:center;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+  .ulter-logo{display:none;height:30px;width:auto}
+  .ulter-wordmark{font-family:"Archivo",sans-serif;font-weight:800;font-size:1.3rem;letter-spacing:.02em;color:#005152;background:#ffeadf;padding:4px 14px;border-radius:4px}
+  .ulter-wordmark span{font-weight:500;color:#f85300;font-size:.92rem;letter-spacing:.08em;margin-left:5px}
+  .finance-panel h2{font-size:clamp(1.7rem,3vw,2.5rem);color:#fff;max-width:20ch;letter-spacing:-.02em}
+  .finance-lede{color:#cfe3e3;margin-top:16px;font-size:1.06rem;max-width:60ch}
+  .finance-lede strong{color:#fff}
+  .finance-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:30px 0 28px;border-top:1px solid rgba(230,241,241,.22);padding-top:26px}  .ftile .fv{font-family:"Antonio",sans-serif;font-weight:400;font-size:1.95rem;color:var(--ulter-gold);line-height:1}
+  .ftile .fv{font-family:"Antonio",sans-serif;font-weight:400;font-size:1.95rem;color:#ff9a66;line-height:1}
+  .ftile .fk{font-size:.76rem;color:#8fb3b3;text-transform:uppercase;letter-spacing:.1em;margin-top:8px}  .finance-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn-ghost-dark:hover{border-color:#f85300;color:#fff}
+  .btn-ghost-dark:hover{border-color:var(--ulter-gold);color:#fff}
+  .finance-fine{font-size:.78rem;color:#7ea6a6;margin-top:22px;max-width:74ch;line-height:1.6}
+  .finchk{display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:#bcd2da;margin:4px 0 16px;cursor:pointer}
+  .finchk input{margin-top:3px;accent-color:var(--gold);width:16px;height:16px;flex:none}
+
+  /* photos (optional — populated via IMAGES / HERO_IMG / FEAT_IMG in the script) */
+  .card-photo{position:relative;height:170px;margin:-26px -24px 18px;border-radius:var(--r) var(--r) 0 0;background-size:cover;background-position:center;display:flex;align-items:flex-end;gap:10px;padding:14px 18px}
+  .card-photo::before{content:"";position:absolute;inset:0;border-radius:var(--r) var(--r) 0 0;background:linear-gradient(180deg,rgba(7,33,46,.05) 35%,rgba(7,33,46,.72))}
+  .card-photo .photo-num{position:relative;z-index:1;color:#fff;font-size:2.8rem}
+  .card-photo .photo-tag{position:relative;z-index:1;color:#fff;margin-left:auto;text-align:right;max-width:11ch}
+  .card.has-photo::after{display:none}
+  .hero-photo{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center 32%}
+  .hero-photo.on::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,42,58,.45),rgba(6,26,36,.86))}
+  .feat-numwrap.has-photo{background-size:cover;background-position:center}
+  .feat-numwrap.has-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(7,33,46,.55),rgba(6,26,36,.82))}
+  .feat-numwrap.has-photo > *{position:relative;z-index:1}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:900px){
+    .nav-links{display:none}
+    .feat-grid{grid-template-columns:1fr;gap:36px}
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .why-grid{grid-template-columns:1fr}
+    .ev-grid{grid-template-columns:1fr}
+    .finance-tiles{grid-template-columns:repeat(2,1fr)}
+    .finance-panel{padding:40px 28px}
+    .contact-grid{grid-template-columns:1fr;gap:34px}
+  }
+  @media(max-width:560px){
+    section{padding:68px 0}
+    .grid{grid-template-columns:1fr}
+    .feat-specs{grid-template-columns:repeat(2,1fr)}
+    .hero-stats{gap:28px}
+    .row2{grid-template-columns:1fr}
+    .strip .wrap{justify-content:flex-start}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+    .card:hover{transform:none}
+  }
+/* ulter overrides */
+.finance-head > :first-child{color:#f85300}
+.finance-cta a:not(.btn-ghost-dark){background:#f85300;color:#fff}
+.finance-cta a:not(.btn-ghost-dark):hover{background:#ff6a1f}
+.finance-cta .btn-ghost-dark{border:1px solid rgba(236,230,218,.35)}
+.finance-cta .btn-gold{background:#f85300;color:#fff}
+.finance-cta .btn-gold:hover{background:#ff6a1f}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand" id="brandLink"><img id="brandLogo" class="brand-logo" alt="Red Sea Sails"><span id="brandText">Red&nbsp;Sea&nbsp;Sails <span class="x">×</span> <span class="hanse">HANSE</span></span></a>
+    <nav class="nav-links">
+      <a href="#featured">Hanse 460</a>
+      <a href="#fleet">The range</a>
+      <a href="#finance">Financing</a>
+      <a href="#why">Why us</a>
+      <a href="#events">Events</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-gold">Request a quote</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top" style="padding:0">
+  <div class="hero-photo" id="heroPhoto" aria-hidden="true"></div>
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 520 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M250 40 L250 600 L70 600 Z" fill="rgba(255,255,255,.06)"/>
+      <path d="M268 90 L268 600 L430 600 Z" fill="rgba(39,167,194,.10)"/>
+      <line x1="250" y1="20" x2="250" y2="610" stroke="rgba(255,255,255,.18)" stroke-width="2"/>
+      <path d="M0 640 Q130 612 260 640 T520 640" stroke="rgba(207,155,78,.45)" stroke-width="1.5" fill="none"/>
+      <path d="M0 680 Q130 652 260 680 T520 680" stroke="rgba(39,167,194,.4)" stroke-width="1.5" fill="none"/>
+      <path d="M0 720 Q130 694 260 720 T520 720" stroke="rgba(255,255,255,.12)" stroke-width="1.5" fill="none"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="hero-eyebrow eyebrow">Official Hanse Yachts partner · Red Sea &amp; Egypt</div>
+    <h1 class="display">German-built sailing yachts, <em>delivered to the Red&nbsp;Sea.</em></h1>
+    <p class="lede">Red Sea Sails has flown the Hanse flag in the Red Sea since 2015. We bring the full range to Egypt and the Gulf — sold, shipped, commissioned and supported locally, by the team behind the region's charter fleet, sailing school and regattas.</p>
+    <div class="hero-cta">
+      <a href="#fleet" class="btn btn-gold">Explore the fleet</a>
+      <a href="#contact" class="btn btn-ghost">Talk to us →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="n">2015</div><div class="l">Sailing Hanse here since</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">Hanse yachts in our fleet</div></div>
+      <div class="stat"><div class="n">2022</div><div class="l">460 · Yacht of the Year</div></div>
+    </div>
+  </div>
+  <div class="waterline"></div>
+</section>
+
+<!-- INTRO STRIP -->
+<div class="strip">
+  <div class="wrap">
+    <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18l9-15 9 15"/><path d="M3 18h18"/></svg> New-yacht sales</div>
+    <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20"/><path d="M12 2a15 15 0 0 0 0 20"/></svg> Charter management</div>
+    <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 4 2 10l10 6 10-6z"/><path d="M6 12v5c0 1 3 2 6 2s6-1 6-2v-5"/></svg> IYT sailing school</div>
+    <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22V4l9 3-9 3"/><path d="M4 14h11l5 4H4"/></svg> Regattas &amp; events</div>
+  </div>
+</div>
+
+<!-- FEATURED 460 -->
+<section class="featured" id="featured">
+  <div class="wrap">
+    <div class="feat-grid">
+      <div class="feat-numwrap reveal" id="featPanel">
+        <span class="badge">★ European Yacht of the Year 2022</span>
+        <div class="num big">460</div>
+        <div class="sub">Hanse · Berret-Racoupeau design</div>
+      </div>
+      <div class="feat-copy reveal">
+        <h3>The award-winner — and a rare demo slot for Egypt.</h3>
+        <p>The Hanse 460 took European Yacht of the Year in the Family Cruiser class: the first Hanse from the French Berret-Racoupeau studio, and a boat that sails flat and fast while living like an apartment below. Self-tacking jib and twin helms make it genuinely short-handed.</p>
+        <div class="feat-specs">
+          <div class="s"><div class="v">14.60 m</div><div class="k">Length overall</div></div>
+          <div class="s"><div class="v">4.79 m</div><div class="k">Beam</div></div>
+          <div class="s"><div class="v">2.25 m</div><div class="k">Draft (L-keel)</div></div>
+          <div class="s"><div class="v">113 m²</div><div class="k">Upwind sail area</div></div>
+          <div class="s"><div class="v">57–80 hp</div><div class="k">Diesel</div></div>
+          <div class="s"><div class="v">450 l</div><div class="k">Fresh water</div></div>
+        </div>
+        <p class="feat-note">◆ A demo-designated new-build slot secured for the Red Sea — limited window. Ask us for the configured spec and a delivered-Egypt quote.</p>
+        <button class="btn btn-gold enquire" data-model="Hanse 460">Enquire about the 460</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLEET -->
+<section class="fleet" id="fleet">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">The Hanse range</div>
+      <h2 class="display">From a nimble 31‑footer to a 58′ flagship.</h2>
+      <p>Every current Hanse, with headline specifications and indicative list pricing. Tell us how you sail and we'll match the boat — and quote it delivered to Egypt.</p>
+    </div>
+    <div class="fleet-controls reveal">
+      <div class="note">Specifications from Hanse 2025 price lists. Prices are indicative list, ex‑works, excluding VAT &amp; local duties.</div>
+    </div>
+    <div class="grid" id="fleetGrid"><!-- cards injected --></div>
+  </div>
+</section>
+
+<!-- FINANCING (Ulter by Valu) -->
+<section class="finance" id="finance">
+  <div class="wrap">
+    <div class="finance-panel reveal">
+      <div class="finance-head">
+        <div class="eyebrow" style="color:#f85300">Financing partner</div>
+        <img id="ulterLogo" class="ulter-logo" alt="Ulter by Valu">
+        <div id="ulterWordmark" class="ulter-wordmark">Ulter <span>by valu</span></div>
+      </div>
+      <h2 class="display">Own your Hanse now — pay over time.</h2>
+      <p class="finance-lede">Through our financing partner <strong>Ulter by Valu</strong> — Egypt's first high-end financing solution — qualified buyers can spread the cost of a new Hanse across flexible monthly payments, bringing ownership within closer reach.</p>
+      <div class="finance-tiles">
+        <div class="ftile"><div class="fv">EGP 60M</div><div class="fk">Financing up to</div></div>
+        <div class="ftile"><div class="fv">60 mo.</div><div class="fk">Repayment up to</div></div>
+        <div class="ftile"><div class="fv">Min / none</div><div class="fk">Down payment</div></div>
+        <div class="ftile"><div class="fv">Egypt</div><div class="fk">Eligible buyers</div></div>
+      </div>
+      <div class="finance-cta">
+        <button class="btn btn-gold enquire" data-model="Financing — Ulter by Valu">Ask us about financing</button>
+        <a class="btn btn-ghost-dark" href="https://valugroup.com/personal/ulter" target="_blank" rel="noopener">Learn about Ulter ↗</a>
+      </div>
+      <p class="finance-fine">Indicative, based on Ulter's published terms. Yacht-purchase terms, rates and eligibility are subject to Valu's approval and final confirmation.
+        <!-- TODO (replace once Valu confirms): exact down payment %, tenor, an indicative monthly example, the rate basis, eligibility, and any required regulatory disclaimer wording. --></p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Why buy through Red Sea Sails</div>
+      <h2 class="display">A factory yacht. A local team.</h2>
+      <p>Buying a yacht from abroad is the easy part. Landing it, flagging it and keeping it sailing in the Red Sea is where most buyers get stuck — that's exactly what we handle. We've done it for our own fleet of four Hanse yachts since 2015.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg></div>
+        <h4>Turnkey delivery to Egypt</h4>
+        <p>Order, ocean freight, customs, commissioning and handover — managed end to end, so you take delivery on the water, not at a foreign yard.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M5 8c3-3 11-3 14 0"/><path d="M5 16c3 3 11 3 14 0"/></svg></div>
+        <h4>A berth, and a base</h4>
+        <p>Moorage, maintenance and a crew who know your boat in Hurghada, Soma Bay and El Gouna — plus charter management if you want the yacht to earn.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22V4l9 3-9 3"/><path d="M4 14h11l5 4H4"/></svg></div>
+        <h4>Into the sailing scene</h4>
+        <p>Owners step straight into the Red Sea's racing and events calendar — the Soma Bay festival, the El Gouna regatta and a growing one-design community.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="events" id="events">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">On the water with us</div>
+      <h2 class="display">Two flagship events. One sailing community.</h2>
+    </div>
+    <div class="ev-grid">
+      <div class="ev reveal">
+        <span class="date">Every May</span>
+        <h4>Somabay Sailing Festival</h4>
+        <p>A season-opening week of racing, demo sails and waterfront hospitality on the Red Sea coast — the natural place to step aboard a Hanse.</p>
+        <div class="loc">Soma Bay, Red Sea</div>
+      </div>
+      <div class="ev reveal">
+        <span class="date">Every December</span>
+        <h4>Red Sea Sailing Regatta</h4>
+        <p>The headline regatta of the calendar out of El Gouna, drawing crews from across Egypt and the Gulf for several days of competitive sailing.</p>
+        <div class="loc">El Gouna, Red Sea</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <h2>Get a quote, or just ask a question.</h2>
+        <p class="lede">Tell us which model you're drawn to and how you plan to sail. We'll come back with a configured specification and a price delivered to Egypt.</p>
+        <div class="contact-detail">
+          <a href="mailto:mo@redseasails.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> mo@redseasails.com</a>
+          <a href="https://redseasails.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg> redseasails.com ↗</a>
+          <a href="https://redsearegatta.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22V4l9 3-9 3"/><path d="M4 14h11l5 4H4"/></svg> redsearegatta.com ↗</a>
+          <a href="https://instagram.com/redseasails" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> @redseasails</a>
+          <a href="https://hanseyachts.com/gb/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg> Full galleries on hanseyachts.com ↗</a>
+        </div>
+      </div>
+      <form id="enquiryForm">
+        <div class="row2">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" placeholder="Your name" required></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" placeholder="you@email.com" required></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="f-phone">Phone / WhatsApp</label><input id="f-phone" type="text" placeholder="+20 …"></div>
+          <div class="field"><label for="f-model">Model of interest</label>
+            <select id="f-model"><option value="Not sure yet">Not sure yet — help me choose</option></select>
+          </div>
+        </div>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" placeholder="How you plan to sail, timeline, questions…"></textarea></div>
+        <label class="finchk"><input type="checkbox" id="f-fin"> I'd like information on financing with Ulter by Valu</label>
+        <button type="submit" class="btn btn-gold" id="sendBtn">Send enquiry</button>
+        <div class="form-fine" id="formStatus">Sends straight to mo@redseasails.com — no email app needed.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand" id="footBrand">Red&nbsp;Sea&nbsp;Sails <span style="color:var(--gold);font-weight:500">×</span> <span style="color:var(--azure-bright)">HANSE</span></div>
+      <div class="foot-links">
+        <a href="#featured">Hanse 460</a>
+        <a href="#fleet">The range</a>
+        <a href="#events">Events</a>
+        <a href="https://redseasails.com" target="_blank" rel="noopener">RedSeaSails.com ↗</a>
+        <a href="https://redsearegatta.com" target="_blank" rel="noopener">RedSeaRegatta.com ↗</a>
+        <a href="https://hanseyachts.com/gb/" target="_blank" rel="noopener">HanseYachts.com ↗</a>
+        <a href="https://instagram.com/redseasails" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="mailto:mo@redseasails.com">mo@redseasails.com</a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Pricing &amp; specification notice.</strong> All prices shown are indicative manufacturer list prices, in EUR, ex‑works (ex yard) and <strong>excluding VAT</strong>, freight, import duties, commissioning and local taxes. Figures and specifications are approximate, based on Hanse 2025 price lists (valid from 24.09.2025), and may change without notice. Errors and omissions excepted. This page is operated by Red Sea Sails as an independent dealer/partner; "Hanse" and model names are trademarks of HanseYachts AG. For full specifications, layouts and galleries visit hanseyachts.com. Contact Red Sea Sails for a binding, configured quotation delivered to Egypt.
+      <br><br>© <span id="yr"></span> Red Sea Sails — Hanse division, operated under Red Sea Regatta.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- Model data: edit here to add/update models (e.g. the Hanse 461) ----
+  const MODELS = [
+    {n:"315", tag:"Compact cruiser", from:108900, blurb:"Light, nimble and forgiving — the easy way into Hanse ownership and a natural school boat.",
+      loa:"9.62 m", beam:"3.35 m", draft:"1.35–1.85 m", sail:"47 m²", engine:"13.6–21 hp", design:"Judel/Vrolijk"},
+    {n:"348", tag:"Weekend cruiser", from:144900, blurb:"A roomy, well-mannered weekender that punches above its 34 feet for couples and small families.",
+      loa:"10.40 m", beam:"3.50 m", draft:"1.55–1.95 m", sail:"55.9 m²", engine:"21–29 hp", design:"Judel/Vrolijk"},
+    {n:"360", tag:"New generation", from:185900, blurb:"The Berret-Racoupeau design language scaled to 37 feet — modern lines, bright volume, easy to sail.",
+      loa:"11.32 m", beam:"3.99 m", draft:"1.65–2.05 m", sail:"61 m²", engine:"29–39 hp", design:"Berret-Racoupeau"},
+    {n:"360ST", tag:"Sport · to series", from:225900, blurb:"The performance-minded Sport version: deeper T-keel, taller rig and more sail for spirited Red Sea wind.",
+      loa:"11.32 m", beam:"3.99 m", draft:"2.13 m", sail:"73 m²", engine:"29–39 hp / electric", design:"Berret-Racoupeau",
+      note:"Series availability on request."},
+    {n:"410", tag:"Bluewater 41", from:258900, blurb:"A genuinely capable 41-footer — a sweet spot for owner-cruising and light charter alike.",
+      loa:"12.55 m", beam:"4.29 m", draft:"1.70–2.10 m", sail:"84 m²", engine:"39–56 hp", design:"Berret-Racoupeau"},
+    {n:"460", tag:"Yacht of the Year", from:329900, featured:true, award:"EYOTY 2022",
+      blurb:"The award-winning 48-footer. Sails flat and fast, lives like an apartment, handles short-handed.",
+      loa:"14.60 m", beam:"4.79 m", draft:"1.75–2.25 m", sail:"113 m²", engine:"57–80 hp", design:"Berret-Racoupeau"},
+    {n:"510", tag:"Flagship cruiser", from:472900, blurb:"Big-boat comfort and serious range in a 52-footer — multi-cabin layouts for premium charter.",
+      loa:"15.97 m", beam:"4.91 m", draft:"1.98–2.43 m", sail:"125.5 m²", engine:"80–110 hp", design:"Berret-Racoupeau"},
+    {n:"590", tag:"Flagship", from:824900, blurb:"The top of the range. A 58-footer for owners who want presence, volume and bluewater capability.",
+      loa:"17.60 m", beam:"5.30 m", draft:"2.18–2.53 m", sail:"151 m²", engine:"110–150 hp", design:"Berret-Racoupeau"},
+  ];
+  // Upcoming / teaser models (no price yet)
+  const TEASERS = [
+    // Restore once confirmed with Hanse:
+    // {n:"461", line:"Arriving 2027", blurb:"The next-generation evolution of the 460, joining the Red Sea Sails line-up. Register early interest."}
+  ];
+
+  // ---- IMAGES: host your own photos (Hanse dealer media kit, or your own Red Sea
+  //      shots) and put the path or URL here. Leave "" to fall back to the numeral.
+  //      Example:  "460": "images/hanse-460.jpg"   or a full https:// URL.
+  const IMAGES = {
+    "315":"h315.jpg", "348":"h348.jpg", "360":"h360.jpg",
+    "360ST":"h360st.jpg", "410":"h410.jpg", "460":"h460.jpg",
+    "510":"h510.jpg", "590":"h590.jpg", "461":""
+  };
+  // ^ Interim photos cropped from the Hanse brochures (kept at the repo root).
+  //   Swap for official media-kit shots later by changing the filenames above.
+  const HERO_IMG = "";   // optional hi-res banner behind the headline
+  const FEAT_IMG = "";   // optional photo behind the 460 feature panel
+
+  // Logos — set a filename to show a logo image; leave "" to keep the text lockup.
+  const RSS_LOGO   = "";  // e.g. "rss-logo.png"  (upload to the repo root too)
+  const ULTER_LOGO = "";  // e.g. "ulter-logo.png"
+
+  // ---- CONTACT FORM DELIVERY ----------------------------------------------
+  // FormSubmit.co — free, unlimited, NO account or signup. The first time the
+  // form is submitted (do one test yourself), FormSubmit emails
+  // mo@redseasails.com an activation link — click it once and the form is live
+  // for good. Privacy tip: after activating you can hide the address by
+  // replacing the email below with the random alias FormSubmit gives you, e.g.
+  //   "https://formsubmit.co/ajax/abcd1234efgh5678"
+  const FORM_ENDPOINT = "https://formsubmit.co/ajax/mo@redseasails.com";
+
+  const euro = v => "€" + v.toLocaleString("en-GB");
+  const grid = document.getElementById("fleetGrid");
+  const select = document.getElementById("f-model");
+
+  function specRow(k,v){return `<div><span>${k}</span><span>${v}</span></div>`}
+
+  MODELS.forEach(m=>{
+    const el = document.createElement("article");
+    const img = IMAGES[m.n] || "";
+    el.className = "card reveal" + (img ? " has-photo" : "");
+    el.innerHTML = `
+      ${img
+        ? `<div class="card-photo" style="background-image:url('${img}')"><span class="num photo-num">${m.n}</span><span class="ctag photo-tag">${m.tag}</span></div>`
+        : `<div class="topline"><div class="num cnum">${m.n}</div><div class="ctag">${m.tag}</div></div>`}
+      ${m.award ? `<span class="award">★ European Yacht of the Year 2022</span>` : ``}
+      <div class="cname">Hanse ${m.n}</div>
+      <div class="cblurb">${m.blurb}</div>
+      <div class="cspecs">
+        ${specRow("LOA",m.loa)}
+        ${specRow("Beam",m.beam)}
+        ${specRow("Draft",m.draft)}
+        ${specRow("Sail area",m.sail)}
+        ${specRow("Engine",m.engine)}
+        ${specRow("Design",m.design)}
+      </div>
+      ${m.note ? `<div class="cnote">${m.note}</div>` : ``}
+      <div class="cfoot">
+        <div class="price"><div class="from">From (ex‑VAT)</div><div class="amt">${euro(m.from)}</div></div>
+        <div class="cbtns">
+          <a class="mini alt" href="https://hanseyachts.com/gb/" target="_blank" rel="noopener">Details ↗</a>
+          <button class="mini enquire" data-model="Hanse ${m.n}">Enquire</button>
+        </div>
+      </div>`;
+    grid.appendChild(el);
+    const opt = document.createElement("option");
+    opt.value = "Hanse " + m.n; opt.textContent = "Hanse " + m.n + (m.award ? " — Yacht of the Year" : "");
+    select.appendChild(opt);
+  });
+
+  TEASERS.forEach(t=>{
+    const el = document.createElement("article");
+    const timg = IMAGES[t.n] || "";
+    el.className = "card teaser reveal" + (timg ? " has-photo" : "");
+    el.innerHTML = `
+      ${timg ? `<div class="card-photo" style="background-image:url('${timg}')"><span class="num photo-num">${t.n}</span></div>` : `<div class="num cnum">${t.n}</div>`}
+      <div class="cname">Hanse ${t.n}</div>
+      <div class="cblurb">${t.blurb}</div>
+      <div class="soon">◆ ${t.line}</div>
+      <div class="cfoot" style="margin-top:22px">
+        <div></div>
+        <button class="mini enquire" data-model="Hanse ${t.n} (2027 interest)">Register interest</button>
+      </div>`;
+    grid.appendChild(el);
+    const opt = document.createElement("option");
+    opt.value = "Hanse " + t.n + " (2027)"; opt.textContent = "Hanse " + t.n + " — arriving 2027";
+    select.appendChild(opt);
+  });
+
+  // Enquire buttons -> preselect model + jump to form
+  document.addEventListener("click", e=>{
+    const b = e.target.closest(".enquire");
+    if(!b) return;
+    const model = b.getAttribute("data-model");
+    if(/financ/i.test(model)){ const fin=document.getElementById("f-fin"); if(fin) fin.checked=true; }
+    else { [...select.options].forEach(o=>{ if(o.value.startsWith(model.split(" (")[0])) select.value=o.value; }); }
+    document.getElementById("contact").scrollIntoView({behavior:"smooth"});
+    setTimeout(()=>document.getElementById("f-name").focus(),500);
+  });
+
+  // Form -> FormSubmit.co (AJAX). Falls back to email if the request fails.
+  const form = document.getElementById("enquiryForm");
+  const sendBtn = document.getElementById("sendBtn");
+  const status = document.getElementById("formStatus");
+  form.addEventListener("submit", e=>{
+    e.preventDefault();
+    const name=document.getElementById("f-name").value.trim();
+    const email=document.getElementById("f-email").value.trim();
+    const phone=document.getElementById("f-phone").value.trim();
+    const model=document.getElementById("f-model").value;
+    const msg=document.getElementById("f-msg").value.trim();
+    const fin=document.getElementById("f-fin").checked ? "Yes" : "No";
+    const payload={
+      Name:name, Email:email, "Phone/WhatsApp":phone, "Model of interest":model,
+      "Financing (Ulter by Valu)":fin,
+      Message:msg, _subject:`Hanse enquiry — ${model} — ${name}`,
+      _template:"table", _captcha:"false"
+    };
+    const label=sendBtn.textContent;
+    sendBtn.disabled=true; sendBtn.textContent="Sending…";
+    status.textContent=""; status.className="form-fine";
+    fetch(FORM_ENDPOINT,{
+      method:"POST",
+      headers:{"Content-Type":"application/json","Accept":"application/json"},
+      body:JSON.stringify(payload)
+    })
+    .then(r=>r.json())
+    .then(d=>{
+      if(d && (d.success==="true" || d.success===true)){
+        form.reset();
+        status.textContent="Thanks — your enquiry is on its way. We'll be in touch shortly.";
+      } else {
+        status.textContent = (d && d.message) ? d.message : "Submitted — please check your email to confirm.";
+      }
+      status.className="form-fine ok";
+    })
+    .catch(()=>{
+      const body=`Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AModel: ${model}%0A%0A${encodeURIComponent(msg)}`;
+      status.innerHTML=`Couldn't send just now — please email <a href="mailto:mo@redseasails.com?subject=${encodeURIComponent('Hanse enquiry — '+model)}&body=${body}">mo@redseasails.com</a> directly.`;
+      status.className="form-fine err";
+    })
+    .finally(()=>{ sendBtn.disabled=false; sendBtn.textContent=label; });
+  });
+
+  // Apply optional hero / featured images (set HERO_IMG / FEAT_IMG above)
+  if (HERO_IMG){ const h=document.getElementById("heroPhoto"); h.style.backgroundImage=`url('${HERO_IMG}')`; h.classList.add("on"); }
+  if (FEAT_IMG){ const f=document.getElementById("featPanel"); f.style.backgroundImage=`url('${FEAT_IMG}')`; f.classList.add("has-photo"); }
+
+  // Apply optional logos (set RSS_LOGO / ULTER_LOGO above)
+  if (RSS_LOGO){
+    const bl=document.getElementById("brandLogo"); bl.src=RSS_LOGO; bl.style.display="block";
+    document.getElementById("brandText").style.display="none";
+    document.getElementById("footBrand").innerHTML=`<img src="${RSS_LOGO}" alt="Red Sea Sails" style="height:40px;width:auto">`;
+  }
+  if (ULTER_LOGO){
+    const ul=document.getElementById("ulterLogo"); ul.src=ULTER_LOGO; ul.style.display="block";
+    document.getElementById("ulterWordmark").style.display="none";
+  }
+
+  // Year
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  // Scroll reveal
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target);} });
+  },{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
